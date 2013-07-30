@@ -23,13 +23,15 @@ Source: http://www.gnu.org/licenses/gpl.html
 *****************************************************************************************
 
 Version: 1.0.3alp2r02cba8a Date:29/07/2013
-version 1.0.4alp3r Date:30/07/2013
+
+version: 1.0.4alp3r Date:30/07/2013
 
 Video: httPS://www.youtube.com/levi0x0
 
 Tested on: linux python 2.7.x
 
 sb0x Login Page BruteForce by levi0x0 (httPS://youtube.com/levi0x0)
+
 Options:
 	 -h, --help dispaly help options.
 	 -v, --verbose	verbose mode on.
