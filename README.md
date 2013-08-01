@@ -35,8 +35,11 @@ Tested on: linux python 2.7.x
 sb0x Login Page BruteForce by levi0x0 (https://youtube.com/levi0x0)
 
 Options:
+
 	 -h, --help dispaly help options.
+	 
 	 -v, --verbose	verbose mode on.
+	 
 	 -V, --VERSION	display file verison.
 
 Usage:
@@ -46,3 +49,8 @@ Usage:
 
 
 Exp: python sb0x.py http://target/login.html password.lst -v
+
+Updates 08 2013: 
+05/08/2013 //porxy option
+10/08/2013 //mass chenges
+
