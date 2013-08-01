@@ -26,11 +26,13 @@ Version: 1.0.3alp2r02cba8a Date:29/07/2013
 
 version: 1.0.4alp3r Date:30/07/2013
 
+version 1.0.4alp6 Date 01/08/2013
+
 Video: httPS://www.youtube.com/levi0x0
 
 Tested on: linux python 2.7.x
 
-sb0x Login Page BruteForce by levi0x0 (httPS://youtube.com/levi0x0)
+sb0x Login Page BruteForce by levi0x0 (https://youtube.com/levi0x0)
 
 Options:
 	 -h, --help dispaly help options.
@@ -43,25 +45,4 @@ Usage:
 	sb0x.py <target> <password file> -v
 
 
-Exp: python sb0x.py http://target.com/admin_folder/admin_login.html -v
-
-output:
-
-	+------------------------------------------+
-                            
-		        #       mmmm        
-		  mmm   #mmm   m"  "m m   m 
-		 #   "  #" "#  #  m #  #m#  
-		  """m  #   #  #    #  m#m  
-		 "mmm"  ##m#"   #mm#  m" "m                    
-
-		sb0x Login Page BruteForce
-		 USE IT at YOUR OWN RISK!
-	 (httPS://youtube.com/levi0x0) Copyright (c)2013
-	+-----------------------------------------+
-[$]CMS (wordpress,joomla,None):wordpress
-* UserName (admin):
-* Login error:<strong>ERROR</ERROR>
-
-
-EOF!
+Exp: python sb0x.py http://target/login.html password.lst -v
