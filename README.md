@@ -19,14 +19,14 @@ along with this program; if not, write to the Free Software
  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 MA 02110-1301, USA.
 
-Source: http://www.gnu.org/licenses/gpl.html
+see: LICENSE file
 *****************************************************************************************
 
 Version: 1.0.3alp2r02cba8a Date:29/07/2013
 
-version: 1.0.4alp3r Date:30/07/2013
+Version: 1.0.4alp3 Date:30/07/2013
 
-version 1.0.4alp6 Date 01/08/2013
+Version 1.0.4alp6 Date 01/08/2013
 
 Video: httPS://www.youtube.com/levi0x0
 
