@@ -41,7 +41,7 @@ def banner():
   print logo
   print "\tsb0x v%salp5 Login Page BruteForce" % (version)
   print "\t\t USE IT at YOUR OWN RISK!"
-  print "\t\tCopyright (c)2013"
+  print "\t\t cCopyright (c)2013"
   print "\t+-----------------------------------------+"
   
 #help
