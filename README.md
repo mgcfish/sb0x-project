@@ -30,7 +30,11 @@ Version 1.0.4alp6 Date 01/08/2013
 
 Video: httPS://www.youtube.com/levi0x0
 
-Tested on: linux python 2.7.x
+Tested on: 
+
+1. linux python 2.7.x,
+
+2. Windows XP 5.1.2600 python 2.7.x
 
 sb0x Login Page BruteForce by levi0x0 (https://youtube.com/levi0x0)
 
