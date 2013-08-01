@@ -39,19 +39,9 @@ logo = '''
 def banner():
   print "\t+------------------------------------------+"
   print logo
-<<<<<<< HEAD
-  print "\t\tsb0x v%salp5 Login Page BruteForce" % (version)
+  print "\tsb0x v%salp5 Login Page BruteForce" % (version)
   print "\t\t USE IT at YOUR OWN RISK!"
-<<<<<<< HEAD
-  print "\t (httPS://youtube.com/levi0x0) Copyright (c)2013"
-=======
-  print "\t    (httPS://youtube.com/levi0x0) 2013(c)"
->>>>>>> sb0x 1.0.4alp5
-=======
-  print "\t\tsb0x Login Page BruteForce"
-  print "\t\t USE IT at YOUR OWN RISK!"
-  print "\t (httPS://youtube.com/levi0x0) Copyright (c)2013"
->>>>>>> 0f9ef198f9c8778117d0d9c968242e60b3479263
+  print "\t\tCopyright (c)2013"
   print "\t+-----------------------------------------+"
   
 #help
@@ -67,15 +57,7 @@ def help():
     
   
 #Version
-<<<<<<< HEAD
-<<<<<<< HEAD
-version = '1.0.3'
-=======
 version = '1.0.4'
->>>>>>> sb0x 1.0.4alp5
-=======
-version = '1.0.3'
->>>>>>> 0f9ef198f9c8778117d0d9c968242e60b3479263
   
   
 #Random UserAgent
