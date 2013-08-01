@@ -136,13 +136,13 @@ try:
 
 	Joomla = False
 
-	ask = raw_input("=CMS (wordpress,joomla,None):")
+	ask = raw_input("=CMS (wordpress,None):")
 
 	if ask == "wordpress" or ask == "WORDPRESS" or ask == "Wordpress":
 		WordPress = True
 
 	elif ask == "joomla" or ask == "JOOMLA" or ask == "Jommla":
-		Joomla = True
+		Joomla = False #joomla on devel 01/08/2013
 
 	else:
 		pass
