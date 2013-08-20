@@ -1,1 +1,5 @@
-*.pyc
+#.gitignore file
+core/*.pyc
+lib/*.pyc
+plugins/*.pyc
+
